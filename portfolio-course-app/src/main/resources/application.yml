@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID:replace-me}
+            client-secret: ${GOOGLE_CLIENT_SECRET:replace-me}
+            scope:
+              - openid
+              - profile
+              - email
+
+app:
+  razorpay:
+    key-id: ${RAZORPAY_KEY_ID:replace-me}
+    key-secret: ${RAZORPAY_KEY_SECRET:replace-me}
+  whatsapp:
+    phone-number-id: ${WHATSAPP_PHONE_NUMBER_ID:replace-me}
+    access-token: ${WHATSAPP_ACCESS_TOKEN:replace-me}
